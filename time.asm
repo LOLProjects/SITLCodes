@@ -23,9 +23,9 @@ Loop:
 	LD B2, I1
 	BCD B0, [I3]	;Store bcds
 	ADD I3, I7
-	BCD B1, [I4]
+	BCD B1, [I3]
 	ADD I3, I7
-	BCD B2, [I5]
+	BCD B2, [I3]
 	ADD I3, I7
 	SUB I3, I8
 	LD B9, [I3]
