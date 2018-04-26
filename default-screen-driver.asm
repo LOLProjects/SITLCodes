@@ -5,7 +5,7 @@ Disp:	;I0 gives the address in ram where the string is
 	LD Ie, DispLoop 
 DispLoop:	
 	LD Be, [I0]
-	OUT 0, Bd	;Sets the character position, as Be = 0x1?
+	OUT 0, Bd	;Sets the character position, as Bd = 0x1?
 	OUT 0, 0x20
 	OUT 0, Be
 	INC I0
