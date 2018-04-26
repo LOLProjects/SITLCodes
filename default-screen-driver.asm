@@ -9,7 +9,7 @@ DispLoop:
 	OUT 0, Be
 	INC I0
 	INC Bd
-	CMP Bd, 26
+	CMP Bd, 0x20
 	TSTEQ
 	JPNIF DispLoop
 	RET
