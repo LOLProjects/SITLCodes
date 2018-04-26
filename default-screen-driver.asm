@@ -2,7 +2,6 @@ Disp:	;I0 gives the address in ram where the string is
 		;Disp prints a 16 char string from ram
 	LD Bd, 0x10
 	LD Be, 0
-	LD Ie, DispLoop 
 DispLoop:	
 	LD Be, [I0]
 	OUT 0, Bd	;Sets the character position, as Bd = 0x1?
@@ -12,7 +11,7 @@ DispLoop:
 	INC Bd
 	CMP Bd, 26
 	TSTEQ
-	JPNIF Ie
+	JPNIF DispLoop
 	RET
 Clr:	;Clears the screen
 	OUT 0, 0x00
