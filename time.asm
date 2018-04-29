@@ -40,39 +40,31 @@ Loop:
 	INC I3
 	LD Be, [I3]
 	LD B8, 0
-	LD B7, 0x10
+	LD B7, 0x20
 	OUT 0, 0x00	;Clear screen
 	OUT 0, B7	
 	INC B7
-	OUT 0, 0x20
 	OUT 0, Bd	;Prints first hours char
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, Be	;Prints second hours char
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, 0x3A	;Prints ':' (ascii 3A)
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, Bb	;First minutes char
 	OUT 0, B7
 	INC B7 
-	OUT 0, 0x20
 	OUT 0, Bc	;Second minutes char
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, 0x20	;Prints ' ' (ascii 20)
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, B9	;First seconds char
 	OUT 0, B7
 	INC B7
-	OUT 0, 0x20
 	OUT 0, Ba	;Second seconds char
 	JP Loop
 	
