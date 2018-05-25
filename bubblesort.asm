@@ -10,7 +10,7 @@ LD N0, 1
    CMP B0, Bx
    JPIF .outer
    
-   LD I0, [Ix+B0] 
+   LD I0, [Ix+B0] ; Ix is meant to be changed by the user. Ix would NOT be assembled correctly if it were to be put through an assembler
    LD I1, [Ix+B0+1] 
    CMP I0, I1
    TSTGT
